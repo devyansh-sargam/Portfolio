@@ -8,19 +8,19 @@ const Skills = () => {
   const categories = [
     {
       name: "Frontend",
-      skills: ["React.js", "React Native", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind CSS"]
+      skills: ["React.js", "Next.js", "JavaScript", "HTML", "CSS", "Tailwind CSS"]
     },
     {
       name: "Backend",
-      skills: ["Node.js", "Express.js", "Python", "C++", "REST APIs", "WebSockets"]
+      skills: ["Node.js", "Express.js", "Python", "C++", "REST APIs", "WebSockets", "Postman"]
     },
     {
       name: "Database",
-      skills: ["SQL", "Prisma", "MongoDB", "DynamoDB", "PostgreSQL"]
+      skills: ["SQL", "Neon DB", "MongoDB", "Drizzle ORM"]
     },
     {
       name: "DevOps & Tools",
-      skills: ["AWS Lambda", "Git", "BeautifulSoup", "Google Gemini API"]
+      skills: ["AWS Lambda", "Git", "AWS S3", "Docker", "AWS EC2", "Google Gemini API", "Firebase", "Docker"]
     }
   ];
 

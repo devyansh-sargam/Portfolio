@@ -7,26 +7,28 @@ const Education = () => {
 
   const education = [
     {
-      institution: "Vasavi College of Engineering",
+      institution: "Chandigarh University",
       degree: "Bachelor of Engineering",
-      field: "Electronics and Communication Engineering (ECE)",
-      period: "2019-2023"
+      field: "Computer Science Engineering (CSE)",
+      period: "2022-2026"
     },
     {
-      institution: "Sri Chaitanya Junior College",
+      institution: "International Public School",
       degree: "Intermediate",
-      field: "MPC",
-      period: "2017-2019"
+      field: "PCM",
+      period: "2020-2022"
     }
   ];
 
   const achievements = [
-    "Winner – IWD Hackathon by Google Developer Group Hyderabad",
-    "4* Coder on CodeChef, solved 600+ DSA problems across platforms like LeetCode, CodeChef, and CSES",
-    "CodeChef Student Chapter & GDG CP Lead – Led competitive programming events and workshops",
-    "National Handball Goalkeeper – Kendriya Vidyalaya",
-    "2019 National & Indian National Mathematics Olympiad (INMO) Regionalist",
-    "Participated in Hackathon conducted by VIIT ACM Chapter"
+    <a href="https://oneroadmap.io/skills/devops/certificate/CERT-71FA4136">DevOps Engineer</a>,
+    <a href="https://oneroadmap.io/skills/fs/certificate/CERT-8D84FD36">Full Stack Developer</a>,
+    <a href="https://oneroadmap.io/skills/ai/certificate/CERT-854E0C1A">AI Engineer</a>,
+    "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional ",
+    <a href="https://www.coursera.org/account/accomplishments/specialization/6JMMFFR9RM6N">Cloud Computing</a>,
+    "SEBI - Investor Certification",
+    <a href="https://www.coursera.org/account/accomplishments/verify/CKBYKX9HUD7Z">Introduction to Data Science in Python</a>,
+    
   ];
 
   const containerVariants = {
@@ -54,7 +56,7 @@ const Education = () => {
           className="mb-12"
         >
           <h4 className="font-mono text-sm text-muted mb-2">BACKGROUND</h4>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Education & Achievements</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Education & Certifications</h2>
           <div className="w-16 h-[2px] bg-light opacity-50"></div>
         </motion.div>
 
@@ -93,7 +95,7 @@ const Education = () => {
           >
             <h3 className="text-xl font-medium mb-6 flex items-center">
               <div className="w-4 h-4 border border-light mr-3"></div>
-              Achievements
+              Certifications
             </h3>
 
             <ul className="space-y-4">

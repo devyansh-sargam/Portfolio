@@ -6,70 +6,45 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "FitBill - Gym Management System",
-      description: "A comprehensive cross-platform solution designed for modern gym businesses that streamlines membership management, attendance tracking, and financial operations. The system automatically sends timely membership renewal notifications, monitors daily facility usage patterns, and provides insightful financial analytics through intuitive dashboards, enabling gym owners to make data-driven decisions and optimize operational efficiency.",
-      tech: ["React Native", "Express.js", "Prisma", "SQL", "AWS Lambda"],
+      title: "Helping Hands - A Full-Stack Donation Platform",
+      description: "Helping Hands is a full-stack donation platform connecting donors with people in need. Built with Node.js, Express.js, MongoDB, and Razorpay payment integration, it features secure authentication, real-time donation tracking, and responsive design. The platform enables transparent charitable giving through a user-friendly interface, ensuring every contribution reaches verified requests efficiently.",
+      tech: ["Node.js", "Express.js", "MongoDB", "Razorpay", "React.js"],
       image: "/images/fitbill-preview.png",
-      liveLink: "http://youtube.com/watch?v=Dbkf_2kh1ho",
+      liveLink: "https://devyansh-sargam.github.io/helping-hands-donation/",
       highlights: [
-        "Automated membership renewal alerts",
-        "Daily check-in/check-out tracking",
-        "Financial dashboards",
-        "Supports hundreds of daily active users"
+        "Secure donor and recipient authentication",
+"Real-time donation tracking and transparency",
+"Integrated Razorpay payment gateway",
+"Responsive, user-friendly full-stack interface"
       ]
     },
     {
-      title: "Student Attendance Tracking System",
-      description: "An innovative serverless attendance solution leveraging AWS Lambda and Python to deliver cost-effective, real-time attendance tracking for educational institutions. The system employs sophisticated HTML parsing techniques with BeautifulSoup to extract attendance data from various sources, processes it through a highly optimized pipeline, and delivers accurate, instantaneous results to thousands of users daily without incurring operational costs, making it an ideal solution for resource-constrained educational environments.",
-      tech: ["AWS Lambda", "Python", "WebSocket", "DynamoDB", "BeautifulSoup"],
+      title: "Ransomware Detection System",
+      description: "This project is a cloud-based ransomware detection system that uses behavioral analysis and machine learning to identify malicious file encryption activities in real time. It monitors file system behavior and applies anomaly detection models built with Python and Scikit-learn to flag suspicious patterns with over 90% accuracy. The detection engine is integrated with AWS services such as Lambda, S3, and SNS to enable automated alerts and rapid incident response. By enabling early threat identification, the system significantly reduces ransomware impact, cutting average containment time by 40% and improving overall security resilience.",
+      tech: ["AWS Lambda", "AWS S3", "AWS SNS", "React.js", "Node.js", "Express.js"],
       image: "/images/attendance-preview.png",
-      liveLink: "https://github.com/sri-ganeshk/Attendance_tracker",
+      liveLink: "https://devyansh-sargam.github.io/ransomware-detection-system/",
       highlights: [
-        "Handles ~3,000 unique daily users",
-        "10,000+ requests/day at zero cost",
-        "Avg response time of 1.5-2 seconds",
-        "Real-time HTML parsing"
+        "Real-time ransomware behavior detection",
+        "Machine learning–based anomaly monitoring",
+        "Automated cloud alerts and incident response",
+        "Reduces ransomware impact and containment time by 40%"
       ]
     },
     {
-      title: "StudySphere – Curated Learning Platform",
-      description: "An advanced educational platform that revolutionizes self-paced learning through AI-powered content organization and generation. StudySphere allows users to curate and structure courses on any topic with intelligent assistance, automatically generating customized flashcards, comprehensive notes, and interactive quizzes tailored to individual learning preferences. The integration with Google Gemini API enables sophisticated content summarization and knowledge extraction, creating a personalized learning experience that adapts to users' comprehension levels and learning styles.",
-      tech: ["Next.js", "Prisma", "Google Gemini API", "TailwindCSS", "PostgreSQL"],
+      title: "AI-Powered Finance Assistant",
+      description: "This AI-powered finance assistant automates personal financial management by handling budgeting, expense tracking, and investment analysis through an intelligent, user-centric platform. Built with Next.js, Drizzle ORM, Neon DB, and Clerk for secure authentication, it delivers real-time insights through an intuitive dashboard. The system leverages machine learning models to provide personalized financial recommendations, predict cash flow, and assess risk based on user behavior. Deployed on scalable cloud infrastructure, the product enhances decision-making and efficiency, reducing manual financial management effort by 20% while helping users gain better control over their finances.",
+      tech: ["Next.js", "Drizzle ORM", "Google Gemini API", "TailwindCSS", "Neon DB", "Clerk", "Python"],
       image: "/images/studysphere-preview.png",
-      liveLink: "https://hackthon-six.vercel.app/",
+      liveLink: "https://github.com/devyansh-sargam/AIFinanceTracker",
       highlights: [
-        "Automatic flashcards & notes generation",
-        "On-the-fly quizzes",
-        "AI-powered content summarization",
-        "Self-paced, structured learning"
+        "Automated budgeting and expense tracking",
+        "AI-driven financial recommendations and insights",
+        "Real-time dashboards with visual analytics",
+        "Reduces manual finance management by 20%"
       ]
     },
-    {
-      title: "Movie Review Platform",
-      description: "A modern, fully responsive web application designed for movie enthusiasts to discover, review, and engage with film content. The platform leverages The Movie Database API to provide users with real-time access to a vast library of films, complete with detailed information and high-quality imagery. With a robust user authentication system using JWT tokens, the application delivers personalized experiences allowing users to create accounts, save favorites, and contribute their own reviews to the community. The intuitive interface, built with React and styled with Tailwind CSS, ensures a seamless viewing experience across all devices.",
-      tech: ["React", "Tailwind CSS", "TMDB API", "MongoDB", "JWT", "Responsive Design"],
-      image: "/images/movie-review-preview.png",
-      liveLink: "https://movie-review-omega-seven.vercel.app/",
-      highlights: [
-        "Real-time movie data integration with TMDB API",
-        "Secure JWT-based user authentication",
-        "Intuitive and fully responsive design",
-        "Personalized user experiences with saved preferences"
-      ]
-    },
-    {
-      title: "Pressure Cooker Whistle Counter",
-      description: "An innovative Android application born from everyday necessity, designed to automate the mundane task of counting pressure cooker whistles during cooking. This offline-first app utilizes sophisticated audio processing algorithms to detect and count whistles in real-time using the device's microphone, without requiring an internet connection. With a focus on privacy, the application processes all audio data locally and on-the-fly without storing any recordings. The implementation includes custom sound analysis using Fast Fourier Transform (FFT) and Tarsos DSP library to accurately identify the distinctive whistle frequency pattern amid background noise, making cooking precision effortless for users.",
-      tech: ["Java", "Kotlin", "FFT", "Tarsos DSP", "Spectrograms", "Android Media"],
-      image: "/images/whistle-counter-preview.png",
-      liveLink: "",
-      highlights: [
-        "Offline operation for areas with limited connectivity",
-        "Privacy-focused with no data storage",
-        "Real-time audio processing and frequency analysis",
-        "Future ML integration for multi-cooker scenarios"
-      ]
-    }
+    
   ];
   
   const containerVariants = {
