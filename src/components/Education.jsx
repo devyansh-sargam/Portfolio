@@ -117,8 +117,7 @@ const Education = () => {
             >
               <h4 className="text-sm font-medium mb-2">Continuous Learning</h4>
               <p className="text-muted text-sm">
-                Always exploring new technologies and participating in hackathons
-                to expand my knowledge and practical experience.
+              Always exploring new technologies and building hands-on projects to continuously expand my knowledge and practical experience.
               </p>
             </motion.div>
           </motion.div>
