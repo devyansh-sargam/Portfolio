@@ -20,7 +20,7 @@ const Skills = () => {
     },
     {
       name: "DevOps & Tools",
-      skills: ["AWS Lambda", "Git", "AWS S3", "Docker", "AWS EC2", "Google Gemini API", "Firebase", "Docker"]
+      skills: ["AWS Lambda", "Git", "AWS S3", "Docker", "AWS EC2", "Google Gemini API", "Firebase", "Kubernetes", "Postman"]
     }
   ];
 
