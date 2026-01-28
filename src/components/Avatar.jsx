@@ -1,61 +1,73 @@
-import React, { useState, useEffect, useRef } from 'react';
-
-const MAX_AVATAR_TILT_ANGLE = 12;
+import React from 'react';
 
 const Avatar = () => {
-  const [avatarTiltTransform, setAvatarTiltTransform] = useState('');
-  const avatarRef = useRef(null);
-
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      if (!avatarRef.current) return;
-
-      const rect = avatarRef.current.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-
-      const deltaX = event.clientX - centerX;
-      const deltaY = event.clientY - centerY;
-
-      let rotateY = (deltaX / (rect.width / 2)) * MAX_AVATAR_TILT_ANGLE;
-      let rotateX = (-deltaY / (rect.height / 2)) * MAX_AVATAR_TILT_ANGLE;
-
-      rotateX = Math.max(-MAX_AVATAR_TILT_ANGLE, Math.min(MAX_AVATAR_TILT_ANGLE, rotateX));
-      rotateY = Math.max(-MAX_AVATAR_TILT_ANGLE, Math.min(MAX_AVATAR_TILT_ANGLE, rotateY));
-
-      setAvatarTiltTransform(
-        `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
-      );
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   const styles = {
     container: {
-      width: 300,                 // wider container
+      width: 300,
       height: 220,
       position: 'relative',
       display: 'flex',
-      justifyContent: 'flex-end', // push image to the right
+      justifyContent: 'flex-end',
       alignItems: 'center',
-      transform: avatarTiltTransform,
-      transition: 'transform 0.12s cubic-bezier(0.22, 1, 0.36, 1)',
+      perspective: '900px',
     },
-    image: {
+    rotator: {
       width: 180,
       height: 220,
+      transformStyle: 'preserve-3d',
+      animation: 'swing 4s ease-in-out infinite',
+      position: 'relative',
+    },
+    glow: {
+      position: 'absolute',
+      inset: '-12px',
+      borderRadius: '12px',
+      filter: 'blur(18px)',
+      background: 'rgba(120, 160, 255, 0.35)',
+      opacity: 0,
+      transition: 'opacity 0.3s ease',
+      zIndex: 0,
+    },
+    image: {
+      width: '100%',
+      height: '100%',
       objectFit: 'contain',
-      transform: 'scale(2.22)',
       display: 'block',
+      transform: 'scale(2)',
+      backfaceVisibility: 'hidden',
+      position: 'relative',
+      zIndex: 1,
+      transition: 'filter 0.3s ease',
     },
   };
 
   return (
-    <div ref={avatarRef} style={styles.container}>
-      <img src="/Subject.png" alt="Avatar" style={styles.image} />
-    </div>
+    <>
+      <style>
+        {`
+          @keyframes swing {
+            0%   { transform: rotateY(-15deg); }
+            50%  { transform: rotateY(15deg); }
+            100% { transform: rotateY(-15deg); }
+          }
+
+          .avatar-wrap:hover .glow {
+            opacity: 0.6;
+          }
+
+          .avatar-wrap:hover img {
+            filter: drop-shadow(0 0 10px rgba(140, 180, 255, 0.45));
+          }
+        `}
+      </style>
+
+      <div style={styles.container}>
+        <div className="avatar-wrap" style={styles.rotator}>
+          <div className="glow" style={styles.glow} />
+          <img src="/Subject.png" alt="Avatar" style={styles.image} />
+        </div>
+      </div>
+    </>
   );
 };
 
